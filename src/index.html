@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@300;500&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tarea Robotica</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Cinemática inversa por método CCD</h1>
+        <h2>Autor: Azuara Hernández Jorge Luis (s18001575)</h2>
+    </header>
+
+    <p><strong>Descripción: </strong> Obtener la cinemática inversa del siguiente robot mediante el método CCD</p>
+    <p>Considerar un criterio de paro cuando el efector final se encuentra en un umbral menor de 1mm del objetivo</p>
+
+    <img src="assets/img/img1.png" alt="" width="300px">
+
+    <form action="">
+        <div>
+            <h2>Ingrese los datos correspondientes (condiciones iniciales del robot)</h2>
+            <p>Valores de referencia (0°, 90°, 0.5)</p>
+        </div>
+        <ul>
+            <li>
+                <label for="theta_1">Valor de θ_1</label>
+                <input type="number" id="theta_1" placeholder="Ingrese el valor de Theta1">
+            </li>
+            <li>
+                <label for="theta_2">Valor de θ_2</label>
+                <input type="number" id="theta_2" placeholder="Ingrese el valor de Theta_2">
+            </li>
+            <li>
+                <label for="d3">Valor de D3</label>
+                <input type="number" id="d3" placeholder="Ingrese el valor de D3">
+            </li>
+        </ul>
+
+        <div>
+            <h2>Ingrese los datos correspondientes (punto final)</h2>
+            <p>El punto final será evaluado para saber si se encuentra dentro del espacio de trabajo</p>
+        </div>
+        <ul>
+            <li>
+                <label for="x_final">X</label>
+                <input type="number" id="x_final">
+            </li>
+            <li>
+                <label for="y_final">Y</label>
+                <input type="number" id="y_final">
+            </li>
+            <li>
+                <label for="z_final">Z</label>
+                <input type="number" id="z_final">
+            </li>
+        </ul>
+        <button type="button" onclick="algoritmo_ccd()">Aplicar método CCD</button>
+
+        <div class="mostrar_resultado">
+            <p>R: </p>
+            <p id="elemento_salida"></p>
+        </div>
+    </form>
+    
+
+    <script src="./App.js"></script>
+    
+</body>
+</html>

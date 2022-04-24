@@ -1,0 +1,60 @@
+
+/*
+
+*/
+
+:root{
+
+    /* Colores */
+    --linearbg: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+    --soft-orange: #FFE9D5;
+
+    /* Tipografía */
+    --inter: 'Inter', sand-serif;
+
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+label{
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+button{
+    margin: 2rem 0;
+}
+
+html{
+
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    transition-duration: 500ms;
+    width: 60rem;
+    margin: auto;
+}
+body{
+
+    font: var(--inter);
+    background-color: var(--soft-orange);
+}
+
+.header{
+    text-align: center;
+}
+img{
+    border-radius: 2rem;
+}
+
+.mostrar_resultado{
+    background-color: rgb(188, 229, 245);
+    padding: 2rem;
+    min-height: 2rem;
+    border-radius: 2rem;
+}
