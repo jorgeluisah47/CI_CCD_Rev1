@@ -15,7 +15,7 @@ Es un análisis un poco mas simple, aunque mas largo en terminos computacionales
 
 Algoritmo diseñado para el siguiente robot:
 
-![alt text](./src/assets/img/img.png)
+![alt text](https://raw.githubusercontent.com/jorgeluisah47/CI_CCD_Rev1/main/src/assets/img/img1.png)
 
 
 
