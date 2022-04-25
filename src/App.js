@@ -37,11 +37,13 @@ function algoritmo_ccd() {
     let theta_2 = Number(document.getElementById("theta_2").value);
     let d3 = Number(document.getElementById("d3").value);
 
-        /* De las condiciones iniciales se obtine la cinemática directa para obtener la posición final del efector */
-    let z = ((10*Math.sin(toRadians(theta_2))) + (d3*Math.sin(toRadians(theta_2 - 90)))) + 50;
-    let x = ((d3*Math.sin(toRadians(theta_2))) + (d3*Math.sin(toRadians(theta_2 - 90)))*Math.cos(toRadians(theta_1)));
-    let y = ((d3*Math.sin(toRadians(theta_2))) + (d3*Math.sin(toRadians(theta_2 - 90)))*Math.sin(toRadians(theta_1)));
+    
+	/*	Cinemática directa	*/
+    let z = ((10*Math.sin(toRadians(theta_2))) + (d3*Math.sin(toRadians(theta_2 - 90)))) + 50;					// Eje Z -> Correcto
+    let x = ((10*Math.cos(toRadians(theta_2))) + (d3*Math.cos(toRadians(theta_2 - 90)))) * Math.cos(toRadians(theta_1));	// Eje X -> Correcto
+    let y = ((10*Math.cos(toRadians(theta_2))) + (d3*Math.cos(toRadians(theta_2 - 90)))) * Math.sin(toRadians(theta_1));   	// Eje Y -> Correcto
 
+    //    console.log(x, y, z);
 
         /* Pido al usuario las coordenadas a las cuales quiere mover el efector final */
     let x_final = Number(document.getElementById("x_final").value);
@@ -88,7 +90,6 @@ function algoritmo_ccd() {
             θ_1: ${theta_referencia.toFixed(4)}°
             θ_2: ${angulo_referencia_final}
             D3: ${d3}
-            Err: ${err}
             
             Número de iteraciones: ${numero_iteraciones}
         `;
